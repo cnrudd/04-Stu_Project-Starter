@@ -27,7 +27,7 @@ module.exports = function(app) {
       const result = await db.Example.destroy({ where: { id: req.params.id } });
       const deletedRowCount = result;
       const status = deletedRowCount > 0 ? 200 : 404;
-      res.status(status).json({ deletedRowCount });
+      res.status(status).json({ deletedRowCount });;
     } catch (error) {
       res.status(400).json({ error: { name: error.name, msg: error.message } });
     }
