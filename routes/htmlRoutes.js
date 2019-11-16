@@ -3,6 +3,9 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", async (req, res) => {
+    
+    // add api call logic
+    
     try {
       const dbExamples = await db.Example.findAll({});
       res.render("index", {
