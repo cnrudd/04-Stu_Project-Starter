@@ -44,4 +44,5 @@ db.sequelize.sync(syncOptions).then(function() {
   });
 });
 
+// app exported so that the tests scripts can use it
 module.exports = app;
