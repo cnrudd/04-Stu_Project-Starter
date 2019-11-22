@@ -17,7 +17,7 @@ describe("HTML GET / & /example/1", function() {
     return db.sequelize.sync({ force: true });
   });
 
-  it("should show 1st examples' text", function(done) {
+  it("homepage should show 1st example's text", function(done) {
     // Add some examples to the db to test with
     db.Example.bulkCreate([
       { text: "First Example", description: "First Description" },
@@ -38,7 +38,7 @@ describe("HTML GET / & /example/1", function() {
     });
   });
 
-  it("should show 1st examples' description", function(done) {
+  it("single item page should show 1st example's description", function(done) {
     // Add some examples to the db to test with
     db.Example.bulkCreate([
       { text: "First Example", description: "First Description" },
